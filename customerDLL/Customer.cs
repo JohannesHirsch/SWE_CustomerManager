@@ -25,40 +25,12 @@ namespace customerDLL
         /// <param name="lastName"></param>
         /// <param name="email"></param>
         #region Konstruktoren
-        public Customer(int id,
-            string firstName,
-            string lastName,
-            string email)
-        {
-            if (IsNameValid(firstName))
-            {
-                this.firstName = firstName;
-            }
-            else
-            {
-                throw new InvalidOperationException("First Name is not Valid!");
-            }
-
-            if (IsNameValid(lastName))
-            {
-                this.lastName = lastName;
-            }
-            else
-            {
-                throw new InvalidOperationException("Last Name is not Valid!");
-            }
-
-            
-
-            this.id = id;
-            this.balance = 0;
-            this.lastChange = DateTime.Now;
-        }
 
         public Customer(int id,
             string firstName,
             string lastName,
-            string email, out Error error)
+            string email,
+            out Error error)
         {
             error = new Error();
             error.Code = 0;
@@ -109,33 +81,37 @@ namespace customerDLL
             string lastName,
             string email,
             double balance,
-            DateTime lastChange)
+            DateTime lastChange,
+            out Error error)
         {
-            if (IsNameValid(firstName))
+            error = new Error();
+            error.Code = 0;
+
+            if (IsNameValid(firstName) && error.Code == 0)
             {
                 this.firstName = firstName;
             }
             else
             {
-                throw new InvalidOperationException("First Name is not Valid!");
+                error.Code = 1;
             }
 
-            if (IsNameValid(lastName))
+            if (IsNameValid(lastName) && error.Code == 0)       // nur ausführen wenn noch kein Error vorliegt
             {
                 this.lastName = lastName;
             }
             else
             {
-                throw new InvalidOperationException("Last Name is not Valid!");
+                error.Code = 2;
             }
 
-            if (IsEmailValid(email))
+            if (IsEmailValid(email) && error.Code == 0)         // nur ausführen wenn noch kein Error vorliegt
             {
                 this.email = email;
             }
             else
             {
-                throw new InvalidOperationException("Email is not Valid!");
+                error.Code = 3;
             }
 
             this.id = id;
