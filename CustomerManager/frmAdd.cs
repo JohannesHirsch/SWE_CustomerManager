@@ -48,23 +48,30 @@ namespace CustomerManager
         {
             timer = new Stopwatch();
             timer.Start();
-                try
-                {
-                    cNew = new Customer(this.id, this.tbxFirstName.Text, this.tbxLastName.Text, this.tbxEmail.Text);
+            Error error;
+                //try
+                //{
+                    cNew = new Customer(this.id, this.tbxFirstName.Text, this.tbxLastName.Text, this.tbxEmail.Text, out error);
 
-                if (!(Customer.IsEmailUnique(CNew, this.customers)))
-                {
-                    throw new InvalidOperationException("Email is not unique!");
-                }
-
+            //if (!(Customer.IsEmailUnique(CNew, this.customers)))      //TODO
+            //{
+            //    throw new InvalidOperationException("Email is not unique!");
+            //}
+            if (error.Code != 0)
+            {
+                MessageBox.Show(error.Code.ToString());
+            }
+            else
+            {
                 timer.Stop();
                 MessageBox.Show(timer.Elapsed.ToString());
                 DialogResult = DialogResult.OK;
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }                             
+            }
+                //}
+                //catch(Exception ex)
+                //{
+                //    MessageBox.Show(ex.Message);
+                //}                             
         }
         #endregion
     }

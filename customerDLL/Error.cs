@@ -8,7 +8,7 @@ namespace customerDLL
 {
     public struct Error
     {
-        int Code { get; set; }
+        public int Code { get; set; }
         // Message, Wargning....
     }
 }
