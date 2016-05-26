@@ -48,10 +48,18 @@ namespace CustomerManager
         {
             timer = new Stopwatch();
             timer.Start();
-            Error error;
-                //try
-                //{
-                    cNew = new Customer(this.id, this.tbxFirstName.Text, this.tbxLastName.Text, this.tbxEmail.Text, out error);
+            Error error = new Error();
+            //try
+            //{
+            if (this.tbxFirstName.Text != "" && this.tbxLastName.Text != "" && this.tbxEmail.Text != "")
+            {
+                cNew = new Customer(this.id, this.tbxFirstName.Text, this.tbxLastName.Text, this.tbxEmail.Text, out error);
+            }
+            else
+            {
+                error.Code = 4;
+            }
+            
 
             //if (!(Customer.IsEmailUnique(CNew, this.customers)))      //TODO
             //{
@@ -60,6 +68,7 @@ namespace CustomerManager
             if (error.Code != 0)
             {
                 MessageBox.Show(error.Code.ToString());
+                DialogResult = DialogResult.None;
             }
             else
             {

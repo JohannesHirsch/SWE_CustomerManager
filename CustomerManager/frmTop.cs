@@ -49,7 +49,7 @@ namespace CustomerManager
                 bind.DataSource = csv.Customers;
                 dgvCustomers.DataSource = bind;
                 dgvCustomers.Update();
-                dgvCustomers.Show();                
+                dgvCustomers.Show();
             }
         }
 
