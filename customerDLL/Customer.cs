@@ -177,9 +177,6 @@ namespace customerDLL
         {
             bool valid = true;
 
-            try
-            {
-
                 //exakt 1 @
                 string[] tempStr = email.Split('@');
                 int cnt = tempStr.Length;
@@ -228,13 +225,6 @@ namespace customerDLL
                         valid = false;
                     }
                 }
-
-                }
-            catch (Exception)
-            {
-            }
-
-
             return valid;
         }
 
