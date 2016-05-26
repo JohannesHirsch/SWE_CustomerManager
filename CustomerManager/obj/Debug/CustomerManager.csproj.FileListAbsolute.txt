@@ -1,0 +1,15 @@
+C:\GitHub\SWE_CustomerManager\CustomerManager\bin\Debug\CustomerManager.exe.config
+C:\GitHub\SWE_CustomerManager\CustomerManager\bin\Debug\CustomerManager.exe
+C:\GitHub\SWE_CustomerManager\CustomerManager\bin\Debug\CustomerManager.pdb
+C:\GitHub\SWE_CustomerManager\CustomerManager\bin\Debug\customerDLL.dll
+C:\GitHub\SWE_CustomerManager\CustomerManager\bin\Debug\customerDLL.pdb
+C:\GitHub\SWE_CustomerManager\CustomerManager\obj\Debug\CustomerManager.csprojResolveAssemblyReference.cache
+C:\GitHub\SWE_CustomerManager\CustomerManager\obj\Debug\CustomerManager.frmAdd.resources
+C:\GitHub\SWE_CustomerManager\CustomerManager\obj\Debug\CustomerManager.frmEdit.resources
+C:\GitHub\SWE_CustomerManager\CustomerManager\obj\Debug\CustomerManager.frmLogin.resources
+C:\GitHub\SWE_CustomerManager\CustomerManager\obj\Debug\CustomerManager.frmTop.resources
+C:\GitHub\SWE_CustomerManager\CustomerManager\obj\Debug\CustomerManager.frmUser.resources
+C:\GitHub\SWE_CustomerManager\CustomerManager\obj\Debug\CustomerManager.Properties.Resources.resources
+C:\GitHub\SWE_CustomerManager\CustomerManager\obj\Debug\CustomerManager.csproj.GenerateResource.Cache
+C:\GitHub\SWE_CustomerManager\CustomerManager\obj\Debug\CustomerManager.exe
+C:\GitHub\SWE_CustomerManager\CustomerManager\obj\Debug\CustomerManager.pdb
