@@ -49,8 +49,7 @@ namespace CustomerManager
             timer = new Stopwatch();
             timer.Start();
             Error error = new Error();
-            //try
-            //{
+
             if (this.tbxFirstName.Text != "" && this.tbxLastName.Text != "" && this.tbxEmail.Text != "")
             {
                 cNew = new Customer(this.id, this.tbxFirstName.Text, this.tbxLastName.Text, this.tbxEmail.Text, out error);
@@ -59,12 +58,14 @@ namespace CustomerManager
             {
                 error.Code = 4;
             }
-            
 
-            //if (!(Customer.IsEmailUnique(CNew, this.customers)))      //TODO
-            //{
-            //    throw new InvalidOperationException("Email is not unique!");
-            //}
+
+            if (error.Code == 0 && !(Customer.IsEmailUnique(CNew, this.customers)))
+            {
+                error.Code = 5;
+            }
+
+
             if (error.Code != 0)
             {
                 MessageBox.Show(error.Code.ToString());
@@ -75,12 +76,7 @@ namespace CustomerManager
                 timer.Stop();
                 MessageBox.Show(timer.Elapsed.ToString());
                 DialogResult = DialogResult.OK;
-            }
-                //}
-                //catch(Exception ex)
-                //{
-                //    MessageBox.Show(ex.Message);
-                //}                             
+            }                         
         }
         #endregion
     }

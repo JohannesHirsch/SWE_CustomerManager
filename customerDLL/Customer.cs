@@ -69,7 +69,6 @@ namespace customerDLL
             }
             else
             {
-                //throw new InvalidOperationException("First Name is not Valid!");
                 error.Code = 1;
             }
 
@@ -79,7 +78,6 @@ namespace customerDLL
             }
             else
             {
-                //throw new InvalidOperationException("Last Name is not Valid!");
                 error.Code = 2;
             }
 
@@ -89,7 +87,6 @@ namespace customerDLL
             }
             else
             {
-                //throw new InvalidOperationException("Email is not Valid!");
                 error.Code = 3;
             }
 

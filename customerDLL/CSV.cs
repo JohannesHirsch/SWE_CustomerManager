@@ -90,6 +90,7 @@ namespace customerDLL
             strReader = new StreamReader(this.path);
             string line;
             string[] parts;
+
             while (strReader.Peek() >= 0)
             {
                 line = strReader.ReadLine();

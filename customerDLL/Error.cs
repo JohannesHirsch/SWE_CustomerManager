@@ -9,6 +9,8 @@ namespace customerDLL
     public struct Error
     {
         public int Code { get; set; }
+        //public enum Message { OK, Test1, Test2, Test3 }
+        //public Message msg { get; set; }
         // Message, Wargning....
     }
 }
