@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using customerDLL;
+using System.Diagnostics;
 
 namespace CustomerManager
 {
@@ -17,6 +18,7 @@ namespace CustomerManager
         private int id;
         private Customer cNew = null;
         private List<Customer> customers;
+        private Stopwatch timer;
         #endregion
 
         #region Constructor
@@ -44,20 +46,37 @@ namespace CustomerManager
         #region Events
         private void btnOK_Click(object sender, EventArgs e)
         {
-                try
-                {
-                    cNew = new Customer(this.id, this.tbxFirstName.Text, this.tbxLastName.Text, this.tbxEmail.Text);
+            timer = new Stopwatch();
+            timer.Start();
+            Error error = new Error();
 
-                if (!(Customer.IsEmailUnique(CNew, this.customers)))
-                {
-                    throw new InvalidOperationException("Email is not unique!");
-                }
-                    DialogResult = DialogResult.OK;
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }                        
+            if (this.tbxFirstName.Text != "" && this.tbxLastName.Text != "" && this.tbxEmail.Text != "")
+            {
+                cNew = new Customer(this.id, this.tbxFirstName.Text, this.tbxLastName.Text, this.tbxEmail.Text, out error);
+            }
+            else
+            {
+                error.Code = 4;
+            }
+
+
+            if (error.Code == 0 && !(Customer.IsEmailUnique(CNew, this.customers)))
+            {
+                error.Code = 5;
+            }
+
+
+            if (error.Code != 0)
+            {
+                MessageBox.Show(error.Code.ToString());
+                DialogResult = DialogResult.None;
+            }
+            else
+            {
+                timer.Stop();
+                MessageBox.Show(timer.Elapsed.ToString());
+                DialogResult = DialogResult.OK;
+            }                         
         }
         #endregion
     }

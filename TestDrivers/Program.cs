@@ -21,17 +21,17 @@ namespace TestDrivers
 
             //while (cNew == null)
             //{
-                try
-                {
-                    cNew = new Customer(csv.Customers.Count, "TestTestTest", "Test", "asdf");
-                    cNew.Addamount(1000.0);
-                    csv.Customers.Add(cNew);
-                    csv.WriteCSV();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
+                //try
+                //{
+                //    cNew = new Customer(csv.Customers.Count, "TestTestTest", "Test", "asdf");
+                //    cNew.Addamount(1000.0);
+                //    csv.Customers.Add(cNew);
+                //    csv.WriteCSV();
+                //}
+                //catch (Exception e)
+                //{
+                //    Console.WriteLine(e.Message);
+                //}
             //}
             #endregion
             //#region test1

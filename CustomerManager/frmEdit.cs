@@ -52,28 +52,39 @@ namespace CustomerManager
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            try
+            Error error = new Error();
+
+            if (this.tbxLastName.Text != "" && this.tbxEmail.Text != "")
             {
-                cNew = new Customer(this.cOld.ID, this.cOld.FirstName, this.tbxLastName.Text, this.tbxEmail.Text, cOld.Balance, cOld.LastChange);
+                cNew = new Customer(this.cOld.ID, this.cOld.FirstName, this.tbxLastName.Text, this.tbxEmail.Text, cOld.Balance, cOld.LastChange, out error);
                 cNew.Addamount(Convert.ToDouble(this.nudAmount.Value));
 
-                if (!(Customer.IsEmailUnique(CNew, this.customers)))
+                if (error.Code == 0 && !(Customer.IsEmailUnique(CNew, this.customers)))
                 {
-                    throw new InvalidOperationException("Email is not unique!");
+                    error.Code = 5;
                 }
 
-                if (this.cNew.LastName != this.cOld.LastName ||
+                if (error.Code == 0 &&
+                    this.cNew.LastName != this.cOld.LastName ||
                     this.cNew.Email != this.cOld.Email ||
                     this.cNew.Balance != this.cOld.Balance)
                 {
                     this.cNew.LastChange = DateTime.Now;
                 }
-
-                DialogResult = DialogResult.OK;
             }
-            catch (InvalidOperationException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                error.Code = 4;
+            }
+
+            if (error.Code != 0)
+            {
+                MessageBox.Show(error.Code.ToString());
+                DialogResult = DialogResult.None;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
             }
         }
         #endregion
