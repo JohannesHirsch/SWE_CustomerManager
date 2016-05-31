@@ -1,6 +1,6 @@
 ﻿namespace CustomerManager
 {
-    partial class frmTop
+    partial class FrmTop
     {
         /// <summary>
         /// Required designer variable.
@@ -236,11 +236,11 @@
             // 
             // frmMainBindingSource
             // 
-            this.frmMainBindingSource.DataSource = typeof(CustomerManager.frmTop);
+            this.frmMainBindingSource.DataSource = typeof(CustomerManager.FrmTop);
             // 
             // frmMainBindingSource1
             // 
-            this.frmMainBindingSource1.DataSource = typeof(CustomerManager.frmTop);
+            this.frmMainBindingSource1.DataSource = typeof(CustomerManager.FrmTop);
             // 
             // frmTop
             // 

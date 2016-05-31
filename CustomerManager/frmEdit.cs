@@ -11,7 +11,7 @@ using customerDLL;
 
 namespace CustomerManager
 {
-    public partial class frmEdit : frmUser
+    public partial class FrmEdit : FrmUser
     {
 
         #region MemberVariables
@@ -26,7 +26,7 @@ namespace CustomerManager
         /// </summary>
         /// <param name="cOld"></param>
         /// <param name="customers"></param>
-        public frmEdit(Customer cOld, List<Customer> customers)
+        public FrmEdit(Customer cOld, List<Customer> customers)
         {
             InitializeComponent();
 

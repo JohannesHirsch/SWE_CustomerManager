@@ -1,0 +1,8 @@
+C:\GitHub\SWE_CustomerManager\TestDrivers\bin\Release\TestDrivers.exe.config
+C:\GitHub\SWE_CustomerManager\TestDrivers\bin\Release\TestDrivers.exe
+C:\GitHub\SWE_CustomerManager\TestDrivers\bin\Release\TestDrivers.pdb
+C:\GitHub\SWE_CustomerManager\TestDrivers\bin\Release\customerDLL.dll
+C:\GitHub\SWE_CustomerManager\TestDrivers\bin\Release\customerDLL.pdb
+C:\GitHub\SWE_CustomerManager\TestDrivers\obj\Release\TestDrivers.csprojResolveAssemblyReference.cache
+C:\GitHub\SWE_CustomerManager\TestDrivers\obj\Release\TestDrivers.exe
+C:\GitHub\SWE_CustomerManager\TestDrivers\obj\Release\TestDrivers.pdb

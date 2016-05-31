@@ -12,7 +12,7 @@ using System.Diagnostics;
 
 namespace CustomerManager
 {
-    public partial class frmTop : Form
+    public partial class FrmTop : Form
     {
         #region MemberVariables
         CSV csv;
@@ -22,9 +22,9 @@ namespace CustomerManager
 
         #region Constructor
         /// <summary>
-        /// Creates a new frmTop form.
+        /// Creates a new frmTop form which is the main form of the app and displays the cumstomers in a DataGridView
         /// </summary>
-        public frmTop()
+        public FrmTop()
         {
             InitializeComponent();
             csv = new CSV("data.csv");
@@ -37,11 +37,10 @@ namespace CustomerManager
         #endregion
 
         #region Events
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
-            frmAdd add = new frmAdd(csv.Customers.Count, this.csv.Customers);
+            FrmAdd add = new FrmAdd(csv.Customers.Count, this.csv.Customers);
               
             if (add.ShowDialog() == DialogResult.OK)
             {
@@ -76,6 +75,11 @@ namespace CustomerManager
             dgvCustomers.Show();
         }
 
+        /// <summary>
+        /// When the User double-clicks a cell the FrmEdit-Dialog opens, that allows the user to modify a Customer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvCustomers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)//Beim Sortieren ist Index -1 (Header)
@@ -83,7 +87,7 @@ namespace CustomerManager
 
                 int idEdit = Convert.ToInt32(dgvCustomers.Rows[e.RowIndex].Cells[0].Value);
 
-                frmEdit add = new frmEdit(csv.Customers[idEdit], this.csv.Customers);
+                FrmEdit add = new FrmEdit(csv.Customers[idEdit], this.csv.Customers);
 
                 if (add.ShowDialog() == DialogResult.OK)
                 {

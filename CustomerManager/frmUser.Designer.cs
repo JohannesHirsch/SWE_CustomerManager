@@ -1,6 +1,6 @@
 ﻿namespace CustomerManager
 {
-    partial class frmUser
+    partial class FrmUser
     {
         /// <summary>
         /// Required designer variable.

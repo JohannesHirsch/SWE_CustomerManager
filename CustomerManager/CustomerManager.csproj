@@ -47,52 +47,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAdd.cs">
+    <Compile Include="FrmAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAdd.Designer.cs">
-      <DependentUpon>frmAdd.cs</DependentUpon>
+    <Compile Include="FrmAdd.Designer.cs">
+      <DependentUpon>FrmAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEdit.cs">
+    <Compile Include="FrmEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEdit.Designer.cs">
-      <DependentUpon>frmEdit.cs</DependentUpon>
+    <Compile Include="FrmEdit.Designer.cs">
+      <DependentUpon>FrmEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTop.cs">
+    <Compile Include="FrmTop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTop.Designer.cs">
-      <DependentUpon>frmTop.cs</DependentUpon>
+    <Compile Include="FrmTop.Designer.cs">
+      <DependentUpon>FrmTop.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUser.cs">
+    <Compile Include="FrmUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUser.Designer.cs">
-      <DependentUpon>frmUser.cs</DependentUpon>
+    <Compile Include="FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAdd.resx">
-      <DependentUpon>frmAdd.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAdd.resx">
+      <DependentUpon>FrmAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEdit.resx">
-      <DependentUpon>frmEdit.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEdit.resx">
+      <DependentUpon>FrmEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTop.resx">
-      <DependentUpon>frmTop.cs</DependentUpon>
+    <EmbeddedResource Include="FrmTop.resx">
+      <DependentUpon>FrmTop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUser.resx">
-      <DependentUpon>frmUser.cs</DependentUpon>
+    <EmbeddedResource Include="FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -12,7 +12,7 @@ using System.Diagnostics;
 
 namespace CustomerManager
 {
-    public partial class frmAdd : frmUser
+    public partial class FrmAdd : FrmUser
     {
         #region MemberVariables
         private int id;
@@ -27,7 +27,7 @@ namespace CustomerManager
         /// </summary>
         /// <param name="id"></param>
         /// <param name="customers"></param>
-        public frmAdd(int id, List<Customer> customers)
+        public FrmAdd(int id, List<Customer> customers)
         {
             InitializeComponent();
             this.id = id;

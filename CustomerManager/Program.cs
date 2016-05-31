@@ -19,11 +19,11 @@ namespace CustomerManager
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                frmLogin login = new frmLogin();
+                FrmLogin login = new FrmLogin();
 
                 if (login.ShowDialog() == DialogResult.OK)
                 {
-                    Application.Run(new frmTop());
+                    Application.Run(new FrmTop());
                 }
             }
             catch (Exception e)

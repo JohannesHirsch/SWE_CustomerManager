@@ -1,6 +1,6 @@
 ﻿namespace CustomerManager
 {
-    partial class frmEdit
+    partial class FrmEdit
     {
         /// <summary>
         /// Required designer variable.

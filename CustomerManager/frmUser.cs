@@ -11,9 +11,9 @@ using customerDLL;
 
 namespace CustomerManager
 {
-    public partial class frmUser : Form
+    public partial class FrmUser : Form
     {
-        public frmUser()
+        public FrmUser()
         {
             InitializeComponent();
         }

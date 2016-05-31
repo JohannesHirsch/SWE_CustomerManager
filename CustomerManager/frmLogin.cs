@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace CustomerManager
 {
-    public partial class frmLogin : Form
+    public partial class FrmLogin : Form
     {
 
         #region Constructor
-        public frmLogin()
+        public FrmLogin()
         {
             InitializeComponent();
             this.btnOK.Focus();
