@@ -1,0 +1,4 @@
+TODO (JOhannes):
+
+decrypt --> encrypt
+Try - catch bei CSV in Error-Codes ändern wenn möglich

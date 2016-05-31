@@ -81,6 +81,34 @@ namespace customerDLL
         }
 
         /// <summary>
+        /// Writes the list of sustomers to the CSV file.
+        /// </summary>
+        public void WriteLastCustomerCSV()
+        {
+            //this.strWriter = new StreamWriter(this.path, false, Encoding.Default);
+            this.strWriter = new StreamWriter(this.path, true, Encoding.Default);
+
+            try
+            {
+
+
+                this.strWriter.WriteLine("{0};{1};{2};{3};{4};{5}4", EncryptString(Convert.ToString(this.customers[customers.Count-1].ID)),
+                                                    EncryptString(this.customers[customers.Count - 1].FirstName),
+                                                    EncryptString(this.customers[customers.Count - 1].LastName),
+                                                    EncryptString(this.customers[customers.Count - 1].Email),
+                                                    EncryptString(Convert.ToString(this.customers[customers.Count - 1].Balance)),
+                                                    EncryptString(Convert.ToString(this.customers[customers.Count - 1].LastChange)));
+
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            strWriter.Close();
+        }
+
+        /// <summary>
         /// Reads the CSV file and creates a new list of customers.
         /// </summary>
         /// <returns></returns>

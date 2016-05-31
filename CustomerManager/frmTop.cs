@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using customerDLL;
+using System.Diagnostics;
 
 namespace CustomerManager
 {
@@ -39,14 +40,19 @@ namespace CustomerManager
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+
             frmAdd add = new frmAdd(csv.Customers.Count, this.csv.Customers);
               
             if (add.ShowDialog() == DialogResult.OK)
             {
+
                 csv.Customers.Add(add.CNew);
-                csv.WriteCSV();
-                csv = new CSV("data.csv");
+
+                csv.WriteLastCustomerCSV();
+
+                bind = new BindingSource();
                 bind.DataSource = csv.Customers;
+
                 dgvCustomers.DataSource = bind;
                 dgvCustomers.Update();
                 dgvCustomers.Show();
