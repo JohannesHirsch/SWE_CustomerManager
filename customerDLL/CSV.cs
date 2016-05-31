@@ -58,8 +58,6 @@ namespace customerDLL
         {
             this.strWriter = new StreamWriter(this.path, false, Encoding.Default);
 
-            try
-            {
                 for (int i = 0; i < customers.Count; i++)
                 {
 
@@ -71,12 +69,6 @@ namespace customerDLL
                                                         EncryptString(Convert.ToString(this.customers[i].Balance)),
                                                         EncryptString(Convert.ToString(this.customers[i].LastChange)));
                 }
-            }
-            catch (NullReferenceException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
             strWriter.Close();
         }
 
@@ -85,26 +77,14 @@ namespace customerDLL
         /// </summary>
         public void WriteLastCustomerCSV()
         {
-            //this.strWriter = new StreamWriter(this.path, false, Encoding.Default);
             this.strWriter = new StreamWriter(this.path, true, Encoding.Default);
 
-            try
-            {
-
-
-                this.strWriter.WriteLine("{0};{1};{2};{3};{4};{5}4", EncryptString(Convert.ToString(this.customers[customers.Count-1].ID)),
+            this.strWriter.WriteLine("{0};{1};{2};{3};{4};{5}4", EncryptString(Convert.ToString(this.customers[customers.Count-1].ID)),
                                                     EncryptString(this.customers[customers.Count - 1].FirstName),
                                                     EncryptString(this.customers[customers.Count - 1].LastName),
                                                     EncryptString(this.customers[customers.Count - 1].Email),
                                                     EncryptString(Convert.ToString(this.customers[customers.Count - 1].Balance)),
                                                     EncryptString(Convert.ToString(this.customers[customers.Count - 1].LastChange)));
-
-            }
-            catch (NullReferenceException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
             strWriter.Close();
         }
 
@@ -124,8 +104,13 @@ namespace customerDLL
             {
                 line = strReader.ReadLine();
                 parts = line.Split(';');
-                customers.Add(new Customer(Convert.ToInt32(DecryptString(parts[0])), DecryptString(parts[1]), DecryptString(parts[2]), DecryptString(parts[3]), Convert.ToDouble(DecryptString(parts[4])), Convert.ToDateTime(DecryptString(parts[5])), out error));   //??????
-                //Neuer Konstruktor bei dem New amount und Datum eingebbar??????????????????????????????
+                customers.Add(new Customer(Convert.ToInt32(DecryptString(parts[0])), 
+                    DecryptString(parts[1]), 
+                    DecryptString(parts[2]), 
+                    DecryptString(parts[3]), 
+                    Convert.ToDouble(DecryptString(parts[4])),
+                    Convert.ToDateTime(DecryptString(parts[5])), 
+                    out error));
             }
             strReader.Close();
 
@@ -173,13 +158,13 @@ namespace customerDLL
         /// <summary>
         /// Decrypts the string.
         /// </summary>
-        /// <param name="decrypted"></param>
+        /// <param name="encrypted"></param>
         /// <returns></returns>
-        string DecryptString(string decrypted)
+        string DecryptString(string encrypted)
         {
             string plaintext = null;
             
-            string[] number = decrypted.Split(' ');
+            string[] number = encrypted.Split(' ');
             byte[] bnumber = new byte[number.Length - 1];
 
             for (int i = 0; i < number.Length - 1; i++)
@@ -189,7 +174,6 @@ namespace customerDLL
                     bnumber[i] = Convert.ToByte(number[i]);
                 }
             }
-
 
             // Create an Aes object
             // with the specified key and IV.
@@ -214,12 +198,8 @@ namespace customerDLL
                 }
 
             }
-
             return plaintext;
         }
-        #endregion
-
-        #region staticMethods
         #endregion
     }
 }
