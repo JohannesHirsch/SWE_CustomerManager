@@ -18,3 +18,8 @@ C:\GitHub\SWE_CustomerManager\customerDLL\bin\Debug\customerDLL.pdb
 C:\GitHub\SWE_CustomerManager\customerDLL\obj\Debug\customerDLL.csprojResolveAssemblyReference.cache
 C:\GitHub\SWE_CustomerManager\customerDLL\obj\Debug\customerDLL.dll
 C:\GitHub\SWE_CustomerManager\customerDLL\obj\Debug\customerDLL.pdb
+C:\Users\Hofer\Documents\GitHub\SWE_CustomerManager\customerDLL\bin\Debug\customerDLL.dll
+C:\Users\Hofer\Documents\GitHub\SWE_CustomerManager\customerDLL\bin\Debug\customerDLL.pdb
+C:\Users\Hofer\Documents\GitHub\SWE_CustomerManager\customerDLL\obj\Debug\customerDLL.csprojResolveAssemblyReference.cache
+C:\Users\Hofer\Documents\GitHub\SWE_CustomerManager\customerDLL\obj\Debug\customerDLL.dll
+C:\Users\Hofer\Documents\GitHub\SWE_CustomerManager\customerDLL\obj\Debug\customerDLL.pdb
