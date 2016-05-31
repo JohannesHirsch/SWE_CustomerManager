@@ -22,3 +22,11 @@ C:\Users\Hofer\Dropbox\Hirsch_Hofer\1.Semester\2.Semester\SWE\Projekt\CustomerMa
 C:\Users\Hofer\Dropbox\Hirsch_Hofer\1.Semester\2.Semester\SWE\Projekt\CustomerManager\TestDrivers\bin\Debug\customerDLL.dll
 C:\Users\Hofer\Dropbox\Hirsch_Hofer\1.Semester\2.Semester\SWE\Projekt\CustomerManager\TestDrivers\bin\Debug\customerDLL.pdb
 C:\Users\Hofer\Dropbox\Hirsch_Hofer\1.Semester\2.Semester\SWE\Projekt\CustomerManager\TestDrivers\obj\Debug\TestDrivers.csprojResolveAssemblyReference.cache
+C:\GitHub\SWE_CustomerManager\TestDrivers\bin\Debug\TestDrivers.exe.config
+C:\GitHub\SWE_CustomerManager\TestDrivers\bin\Debug\TestDrivers.exe
+C:\GitHub\SWE_CustomerManager\TestDrivers\bin\Debug\TestDrivers.pdb
+C:\GitHub\SWE_CustomerManager\TestDrivers\bin\Debug\customerDLL.dll
+C:\GitHub\SWE_CustomerManager\TestDrivers\bin\Debug\customerDLL.pdb
+C:\GitHub\SWE_CustomerManager\TestDrivers\obj\Debug\TestDrivers.csprojResolveAssemblyReference.cache
+C:\GitHub\SWE_CustomerManager\TestDrivers\obj\Debug\TestDrivers.exe
+C:\GitHub\SWE_CustomerManager\TestDrivers\obj\Debug\TestDrivers.pdb

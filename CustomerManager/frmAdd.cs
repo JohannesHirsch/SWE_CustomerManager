@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using customerDLL;
-using System.Diagnostics;
 
 namespace CustomerManager
 {
@@ -18,7 +17,6 @@ namespace CustomerManager
         private int id;
         private Customer cNew = null;
         private List<Customer> customers;
-        private Stopwatch timer;
         #endregion
 
         #region Constructor
@@ -46,8 +44,6 @@ namespace CustomerManager
         #region Events
         private void btnOK_Click(object sender, EventArgs e)
         {
-            timer = new Stopwatch();
-            timer.Start();
             Error error = new Error();
 
             if (this.tbxFirstName.Text != "" && this.tbxLastName.Text != "" && this.tbxEmail.Text != "")
@@ -73,8 +69,6 @@ namespace CustomerManager
             }
             else
             {
-                timer.Stop();
-                MessageBox.Show(timer.Elapsed.ToString());
                 DialogResult = DialogResult.OK;
             }                         
         }

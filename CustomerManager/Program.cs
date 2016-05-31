@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using customerDLL;
 
 namespace CustomerManager
@@ -15,23 +16,38 @@ namespace CustomerManager
         [STAThread]
         static void Main()
         {
-            try
+            bool noFile = false;        //If there is no CSV file, an Exeption is raised, the file is created and the Dialog is started again.
+            do
             {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                FrmLogin login = new FrmLogin();
-
-                if (login.ShowDialog() == DialogResult.OK)
+                try
                 {
-                    Application.Run(new FrmTop());
-                }
-            }
-            catch (Exception e)
-            {
+                    if (!noFile)
+                    {
+                        Application.EnableVisualStyles();
+                        Application.SetCompatibleTextRenderingDefault(false);
+                        FrmLogin login = new FrmLogin();
 
-                MessageBox.Show(e.Message);
-            }
-                      
+                        if (login.ShowDialog() == DialogResult.OK)
+                        {
+                            Application.Run(new FrmTop());
+                        }
+                    }
+                    else
+                    {
+                        Application.Run(new FrmTop());
+                        noFile = false;
+                    }
+                }
+                catch (FileNotFoundException)
+                {
+                    noFile = true;
+                    CSV.CreateCSV("data.csv");
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+            } while (noFile);
         }
     }
 }

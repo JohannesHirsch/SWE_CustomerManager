@@ -28,16 +28,8 @@ namespace customerDLL
         public CSV(string path)
         {
             this.path = path;
-            try
-            {
-                customers = ReadCSV();
-            }
-            catch (FileNotFoundException e)
-            {
-                Console.WriteLine(e.Message);
-                WriteCSV();
-                customers = ReadCSV();
-            }
+
+            customers = ReadCSV();
         }
         #endregion
 
@@ -200,6 +192,15 @@ namespace customerDLL
             }
             return plaintext;
         }
+        #endregion
+
+        #region Static Methods
+        public static void CreateCSV(string path)
+        {
+            StreamWriter strWriter = new StreamWriter(path, false, Encoding.Default);
+            strWriter.Close();
+        }
+
         #endregion
     }
 }
