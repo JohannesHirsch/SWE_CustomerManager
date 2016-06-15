@@ -2,3 +2,4 @@ C:\GitHub\SWE_CustomerManager\customerDLL\bin\Release\customerDLL.dll
 C:\GitHub\SWE_CustomerManager\customerDLL\bin\Release\customerDLL.pdb
 C:\GitHub\SWE_CustomerManager\customerDLL\obj\Release\customerDLL.dll
 C:\GitHub\SWE_CustomerManager\customerDLL\obj\Release\customerDLL.pdb
+C:\GitHub\SWE_CustomerManager\customerDLL\obj\Release\customerDLL.csprojResolveAssemblyReference.cache
