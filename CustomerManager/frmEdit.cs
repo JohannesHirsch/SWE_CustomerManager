@@ -79,7 +79,7 @@ namespace CustomerManager
 
             if (error.Code != 0)
             {
-                MessageBox.Show(error.Code.ToString());
+                MessageBox.Show(Error.GetErrorMessage(error.Code));
                 DialogResult = DialogResult.None;
             }
             else
@@ -87,6 +87,7 @@ namespace CustomerManager
                 DialogResult = DialogResult.OK;
             }
         }
+
         #endregion
 
     }
