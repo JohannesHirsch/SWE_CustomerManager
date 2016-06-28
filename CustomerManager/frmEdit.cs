@@ -87,6 +87,7 @@ namespace CustomerManager
                 DialogResult = DialogResult.OK;
             }
         }
+
         #endregion
 
     }
