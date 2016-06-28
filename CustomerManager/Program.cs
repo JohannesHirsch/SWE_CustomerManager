@@ -41,7 +41,7 @@ namespace CustomerManager
                 catch (FileNotFoundException)
                 {
                     noFile = true;
-                    CSV.CreateCSV("data.csv");
+                    CSV.CreateCSV("Data/data.csv");
                 }
                 catch (Exception e)
                 {
