@@ -18,6 +18,7 @@ namespace CustomerManager
         CSV csv;
         BindingSource bind;
         bool isDescending;
+        string path = "Data/data.csv";
         #endregion
 
         #region Constructor
@@ -27,7 +28,7 @@ namespace CustomerManager
         public FrmTop()
         {
             InitializeComponent();
-            csv = new CSV("data.csv");
+            csv = new CSV(path);
             bind = new BindingSource();
             bind.DataSource = csv.Customers;
             dgvCustomers.DataSource = bind;
@@ -93,7 +94,7 @@ namespace CustomerManager
                 {
                     csv.Customers[idEdit] = add.CNew;
                     csv.WriteCSV();
-                    csv = new CSV("data.csv");
+                    csv = new CSV(path);
                     bind.DataSource = csv.Customers;
                     dgvCustomers.DataSource = bind;
                     dgvCustomers.Update();
