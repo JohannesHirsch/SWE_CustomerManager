@@ -28,8 +28,6 @@ namespace customerDLL
                 default: msg = "Error code not handled"; break;
             }
 
-
-
             return msg;
         }
     }

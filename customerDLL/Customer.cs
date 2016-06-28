@@ -87,7 +87,7 @@ namespace customerDLL
             error = new Error();
             error.Code = 0;
 
-            if (IsNameValid(firstName) && error.Code == 0)
+            if (IsNameValid(firstName))
             {
                 this.firstName = firstName;
             }
@@ -96,7 +96,7 @@ namespace customerDLL
                 error.Code = 1;
             }
 
-            if (IsNameValid(lastName) && error.Code == 0)       // nur ausführen wenn noch kein Error vorliegt
+            if (IsNameValid(lastName))       // nur ausführen wenn noch kein Error vorliegt
             {
                 this.lastName = lastName;
             }
@@ -105,7 +105,7 @@ namespace customerDLL
                 error.Code = 2;
             }
 
-            if (IsEmailValid(email) && error.Code == 0)         // nur ausführen wenn noch kein Error vorliegt
+            if (IsEmailValid(email))         // nur ausführen wenn noch kein Error vorliegt
             {
                 this.email = email;
             }
